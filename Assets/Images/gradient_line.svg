@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 60">
+  <!-- Define the gradient -->
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="50%" x2="100%" y2="30%">
+      <stop offset="0%" stop-color="rgba(0,0,0,0)" />
+      <stop offset="20%" stop-color="rgba(255,215,0,0.1)" />
+      <stop offset="50%" stop-color="rgba(255,180,0,0.8)" />
+      <stop offset="80%" stop-color="rgba(255,215,0,0.1)" />
+      <stop offset="100%" stop-color="rgba(0,0,0,0)" />
+    </linearGradient>
+    <!-- Add a subtle glow effect -->
+    <filter id="glow" x="-10%" y="-50%" width="120%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- The gradient line -->
+  <rect x="0" y="25" width="1920" height="10" rx="5" ry="5" fill="url(#goldGradient)" filter="url(#glow)" />
+</svg>
